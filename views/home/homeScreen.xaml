@@ -1,0 +1,217 @@
+﻿<Page
+    x:Class="PayZan.views.home.HomeScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views.home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo  />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        -->
+    <!--<Frame x:Name="nav1" Grid.Column="0" Grid.Row="1">
+        </Frame>-->
+    <!--
+    </Grid>-->
+
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="75" ></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4">
+            <Image Height="80" Source="ms-appx:///Assets/1300x200.jpg" Stretch="Fill" ></Image>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" Height="30" Background="#8E2029" Orientation="Vertical">
+            <!--<Image Visibility="Collapsed" Source="/Assets/head_search_icon.png" Height="35" Margin="239,-2,0,0"></Image>-->
+            <Image Source="/Assets/head_notification_icon.png" Height="35" Margin="317,-36,0,0"/>
+            <!--<Image Visibility="Collapsed" Source="/Assets/head_search_icon.png" Height="35" Margin="239,-2,0,0"></Image>-->
+            <!--need to place search box and icons here-->
+        </StackPanel>
+
+        <!--here is the payzan wallet-->
+        <StackPanel  Margin="5,5,5,0" Background="#D3D3D3" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Orientation="Vertical">
+            <TextBlock Margin="5,6,35,5"  Foreground="Black"  Text="PAZAN WALLET"></TextBlock>
+
+            <!--need add AMount-->
+        </StackPanel>
+
+        <GridView ItemClick="lst_GridList_ItemClick" IsItemClickEnabled="True" Height="70"   Name="lst_GridList" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Right" Width="380" Margin="0,5,10,0">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Border CornerRadius="7" Margin="5,5,5,5" BorderThickness ="0.3" Padding="8">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush StartPoint="1,1" EndPoint="1.5,1.5">
+                                <GradientStop Color="#B22222" Offset="0.10" />
+                                <GradientStop Color="#B22222" Offset="0.10"/>
+                                <GradientStop Color="#B22222" Offset="0.10"/>
+                                <GradientStop Color="#B22222" Offset="0.10"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush >
+
+
+                        <StackPanel  Height="45" Width="95"  >
+                            <Image Source="{Binding ImageUrl}"  Width="25" Height="25" Stretch="Fill" ></Image>
+                            <TextBlock  TextAlignment="Center" Text="{Binding Name}"  Foreground="Black" ></TextBlock>
+                        </StackPanel>
+                    </Border>
+
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <ScrollViewer Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="8">
+
+            <!--here is the Recharge and paybill-->
+
+            <StackPanel>
+                
+
+                <StackPanel  Margin="5,5,5,0" Background="#D3D3D3" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="4" Orientation="Vertical">
+                    <TextBlock Margin="5,6,35,5"  Foreground="Black"  Text="RECHARGE AND BILL PAYMENTS"></TextBlock>
+
+                    <!--need add AMount-->
+                </StackPanel>
+
+                <GridView ItemClick="lst_paybill_ItemClick" IsItemClickEnabled="True" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.IsHorizontalRailEnabled="True" Name="lst_paybill" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Margin="6,0,0,0">
+                    <!--<GridView.ItemContainerStyle>
+                        <Style TargetType="GridViewItem">
+                            <Setter Property="Width" Value="100" />
+                        </Style>
+                    </GridView.ItemContainerStyle>-->
+                    <GridView.ItemTemplate >
+                        <DataTemplate >
+                            <Border CornerRadius="7"  Margin="4,4,4,4"   BorderThickness="0.3" Padding="8">
+                                <Border.BorderBrush >
+                                    <LinearGradientBrush StartPoint="1,0" EndPoint="1.5,0.5">
+                                        <GradientStop Color="#B22222" Offset="0.10" />
+                                        <GradientStop Color="#B22222" Offset="0.10"/>
+                                        <GradientStop Color="#B22222" Offset="0.10"/>
+                                        <GradientStop Color="#B22222" Offset="0.10"/>
+                                    </LinearGradientBrush>
+                                </Border.BorderBrush>
+
+                                <StackPanel Background="White" Height="60" Width="70">
+                                    <Image Source="{Binding ImageUrl}"  Width="30" Height="30" Stretch="Fill"></Image>
+                                    <TextBlock x:Name="Names" TextAlignment="Center" Text="{Binding Name}" Foreground="Black" ></TextBlock>
+                                </StackPanel>
+                            </Border>
+
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+
+                <!--here is the banners of payzan-->
+
+                <GridView   Height="75" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.IsHorizontalRailEnabled="False" x:Name="lst_adds" ItemClick="lst_adds_ItemClick" IsItemClickEnabled="True" Width="380" Margin="10,0">
+
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                    <GridView.ItemTemplate >
+                        <DataTemplate>
+
+                            <StackPanel Background="Blue" Margin="5,2,2,5"  Height="75" Width="150"  >
+                                <Image Source="{Binding ImageUrl}"  Width="150" Height="75"  Stretch="Fill" />
+                                <TextBlock   Padding="3" TextAlignment="Center" Text="{Binding Name}" Foreground="Black" Style="{StaticResource ListViewItemTextBlockStyle}" />
+                            </StackPanel>
+
+                            <!--<Border  BorderBrush="Gray" BorderThickness="0.5" Margin="10,10,10,10" Padding="0">
+                        <StackPanel Margin="10,15,10,10" Height="100" Width="100">
+                            <Image Source="{Binding ImageUrl}"  Width="40" Height="25" Stretch="Fill"></Image>
+                            <TextBlock Text="{Binding Name}" Foreground="Black" Margin="5,0,-20,0"></TextBlock>
+                        </StackPanel>
+                    </Border>-->
+
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+
+                <StackPanel  Margin="5,5,5,0" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="5"  Orientation="Vertical">
+                    <TextBlock Margin="0,6,-13,5"   Foreground=" #FF8D2029" Text="Partner with Payzan" Height="25" HorizontalAlignment="Center" Tapped="TextBlock_Tapped" FontFamily="Calibri" VerticalAlignment="Center" FontSize="14" Width="118"></TextBlock>
+
+                    <!--need add AMount-->
+                </StackPanel>
+
+                <!--here is the book on payzan-->
+
+                <!--<StackPanel  Margin="5,5,5,0" Background="#D3D3D3"  Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="7" Height="30" Orientation="Vertical">
+                    <TextBlock Margin="5,6,35,5" FontWeight="Bold"  Text="BOOK ON PAZAN"></TextBlock>
+
+                    -->
+                <!--need add AMount-->
+                <!--
+                </StackPanel>
+                <GridView  ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.IsHorizontalRailEnabled="True" Name="lst_bookPay" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="4">
+
+                    <GridView.ItemTemplate >
+                        <DataTemplate>
+                            -->
+                <!--<Border CornerRadius="7" Margin="5,5,5,5"
+                BorderBrush="#D3D3D3"
+                BorderThickness="2"
+                Padding="8">-->
+                <!--
+                            <Border CornerRadius="7" Margin="5,5,5,5"
+                BorderBrush="#D3D3D3"
+                BorderThickness="2"
+                Padding="8">
+                                <StackPanel  Height="60" Width="70">
+                                    <Image Source="{Binding ImageUrl}"  Width="30" Height="30" Stretch="Fill"></Image>
+                                    <TextBlock TextAlignment="Center" Text="{Binding Name}" Foreground="Black"/>
+                                </StackPanel>
+                            </Border>
+                            -->
+                <!--<Border  BorderBrush="Gray" BorderThickness="0.5" Margin="10,10,10,10" Padding="0">
+                        <StackPanel Margin="10,15,10,10" Height="100" Width="100">
+                            <Image Source="{Binding ImageUrl}"  Width="40" Height="25" Stretch="Fill"></Image>
+                            <TextBlock Text="{Binding Name}" Foreground="Black" Margin="5,0,-20,0"></TextBlock>
+                        </StackPanel>
+                    </Border>-->
+                <!--</DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>-->
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+</Page>

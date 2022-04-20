@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F84B013D-B9B6-4D8C-AFA2-C13FDC669E77}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PayZan</RootNamespace>
+    <AssemblyName>PayZan</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_PHONE_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Folder Include="adapter\" />
+    <Folder Include="Framework\Converters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Contracts\Pocos\Addaddressresponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\addingnewcard.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Addinsert.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Addmoney.cs" />
+    <Compile Include="Framework\Contracts\Pocos\AddmoneyResponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\changepassword.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Changepasswordresponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Deleteaddressresponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\editaddresResponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\editprofileinfo.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Getaddress.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Orderhistory.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Provinceresponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\QRCodemessage.cs" />
+    <Compile Include="Framework\Contracts\Pocos\QRViewModel.cs" />
+    <Compile Include="Framework\Contracts\Pocos\savecards.cs" />
+    <Compile Include="Framework\Contracts\Pocos\SendmoneyResponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\SendmoneyRewquest.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Titletype.cs" />
+    <Compile Include="Framework\Contracts\Pocos\updateaddres.cs" />
+    <Compile Include="Framework\Contracts\Pocos\UpdateadressResponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Updateprofile.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Updateprofileresponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Userprofile.cs" />
+    <Compile Include="Framework\Contracts\Pocos\UserProfileinfo.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Userwalet.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Walletbalancedata.cs" />
+    <Compile Include="Framework\Helpers\ValidationUtil.cs" />
+    <Compile Include="Framework\Contracts\ILocalDataServices.cs" />
+    <Compile Include="Framework\Properties\Constants.cs" />
+    <Compile Include="Framework\services\LocalDataServices.cs" />
+    <Compile Include="Framework\services\RemoteServices.cs" />
+    <Compile Include="Framework\Helpers\ContinuationManager.cs" />
+    <Compile Include="Framework\Helpers\Facebookhelpers.cs" />
+    <Compile Include="Framework\Helpers\SuspensionManager.cs" />
+    <Compile Include="Framework\Contracts\IRemoteServices.cs" />
+    <Compile Include="localizedstrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Contracts\Pocos\AgentRequest.cs" />
+    <Compile Include="Framework\Contracts\Pocos\AgentRequestResponce.cs" />
+    <Compile Include="Framework\Contracts\Pocos\BannerModel.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Broadband.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Cabledetails.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Districts.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Dthdetails.cs" />
+    <Compile Include="Framework\Contracts\Pocos\electricitydetails.cs" />
+    <Compile Include="Framework\Contracts\Pocos\ImageViewModel.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Landlinedetails.cs" />
+    <Compile Include="Framework\Contracts\Pocos\LoginModel.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Mandals.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Mobiledetails.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Servicesapi.cs" />
+    <Compile Include="Framework\Contracts\Pocos\SignUpModel.cs" />
+    <Compile Include="Framework\Contracts\Pocos\SignupResponse.cs" />
+    <Compile Include="Framework\Contracts\Pocos\States.cs" />
+    <Compile Include="Framework\Contracts\Pocos\TypeCdDmts.cs" />
+    <Compile Include="Framework\Contracts\Pocos\UserResponce.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Villages.cs" />
+    <Compile Include="Framework\Contracts\Pocos\Wallet.cs" />
+    <Compile Include="Payzan WinDB\Contacts.cs" />
+    <Compile Include="Payzan WinDB\DatabaseHelperClass.cs" />
+    <Compile Include="Payzan WinDB\SQLite.cs" />
+    <Compile Include="Payzan WinDB\SQLiteAsync.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\Agent Request\Request For Agent.xaml.cs">
+      <DependentUpon>Request For Agent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\BottomNavigationView.xaml.cs">
+      <DependentUpon>BottomNavigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\Add Address.xaml.cs">
+      <DependentUpon>Add Address.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\AddNewAddress.xaml.cs">
+      <DependentUpon>AddNewAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\Addnewcard.xaml.cs">
+      <DependentUpon>Addnewcard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\BroadbandView.xaml.cs">
+      <DependentUpon>BroadbandView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\cableTvVView.xaml.cs">
+      <DependentUpon>cableTvVView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\dataCardView.xaml.cs">
+      <DependentUpon>dataCardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\dthView.xaml.cs">
+      <DependentUpon>dthView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\EditAddress.xaml.cs">
+      <DependentUpon>EditAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\EditProfile.xaml.cs">
+      <DependentUpon>EditProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\electricityView.xaml.cs">
+      <DependentUpon>electricityView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\homeScreen.xaml.cs">
+      <DependentUpon>homeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\landlineView.xaml.cs">
+      <DependentUpon>landlineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\mobileRechargeView.xaml.cs">
+      <DependentUpon>mobileRechargeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\offerView.xaml.cs">
+      <DependentUpon>offerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\Orderhistory.xaml.cs">
+      <DependentUpon>Orderhistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\profileView.xaml.cs">
+      <DependentUpon>profileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\QRScanner.xaml.cs">
+      <DependentUpon>QRScanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\SaveCards.xaml.cs">
+      <DependentUpon>SaveCards.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\walletView.xaml.cs">
+      <DependentUpon>walletView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\home\WaterView.xaml.cs">
+      <DependentUpon>WaterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\loginAndRegistation\AboutUs.xaml.cs">
+      <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\loginAndRegistation\changepassword.xaml.cs">
+      <DependentUpon>changepassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\loginAndRegistation\Editprofile.xaml.cs">
+      <DependentUpon>Editprofile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\loginAndRegistation\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\loginAndRegistation\MyProfile.xaml.cs">
+      <DependentUpon>MyProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\loginAndRegistation\signupView.xaml.cs">
+      <DependentUpon>signupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\loginAndRegistation\TermsofService.xaml.cs">
+      <DependentUpon>TermsofService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\ContentDialog1.xaml.cs">
+      <DependentUpon>ContentDialog1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\ContentDialog2.xaml.cs">
+      <DependentUpon>ContentDialog2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\ContentDialog3.xaml.cs">
+      <DependentUpon>ContentDialog3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\popup\ContentDialog4.xaml.cs">
+      <DependentUpon>ContentDialog4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\Testpage.xaml.cs">
+      <DependentUpon>Testpage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\1.jpg" />
+    <Content Include="Assets\1300 x 250.jpg" />
+    <Content Include="Assets\1300x200.jpg" />
+    <Content Include="Assets\2.jpg" />
+    <Content Include="Assets\3.jpg" />
+    <Content Include="Assets\4.jpg" />
+    <Content Include="Assets\5.JPG" />
+    <Content Include="Assets\950  x 150.jpg" />
+    <Content Include="Assets\950 x 100.JPG" />
+    <Content Include="Assets\aboutus.png" />
+    <Content Include="Assets\back_arrow.png" />
+    <Content Include="Assets\bank_icon.PNG" />
+    <Content Include="Assets\banner.JPG" />
+    <Content Include="Assets\changepassowed.png" />
+    <Content Include="Assets\Credit card.png" />
+    <Content Include="Assets\Default%402x.scale-240.png" />
+    <Content Include="Assets\Default-568h%402x.png" />
+    <Content Include="Assets\Default-667h%402x.scale-100.png" />
+    <Content Include="Assets\Default-667h%402x.scale-140.png" />
+    <Content Include="Assets\Default-667h%402x.scale-240.png" />
+    <Content Include="Assets\Deleteimage.png" />
+    <Content Include="Assets\dth_electricity.PNG" />
+    <Content Include="Assets\dth_icon.PNG" />
+    <Content Include="Assets\edit icon.png" />
+    <Content Include="Assets\edituser.png" />
+    <Content Include="Assets\electricity.png" />
+    <Content Include="Assets\eye icon.png" />
+    <Content Include="Assets\eye-hide.png" />
+    <Content Include="Assets\footer_home_icon.png" />
+    <Content Include="Assets\footer_offers_icon.png" />
+    <Content Include="Assets\footer_user_icon.png" />
+    <Content Include="Assets\footer_wallet_icon.png" />
+    <Content Include="Assets\head_notification_icon.png" />
+    <Content Include="Assets\head_search_icon.png" />
+    <Content Include="Assets\icons8-customer %282%29.png" />
+    <Content Include="Assets\icons8-message.png" />
+    <Content Include="Assets\icons8-user-48 %282%29.png" />
+    <Content Include="Assets\icons8-visa-48.png" />
+    <Content Include="Assets\internet.png" />
+    <Content Include="Assets\landline_icon.PNG" />
+    <Content Include="Assets\Loadingimage.gif" />
+    <Content Include="Assets\logo.png" />
+    <Content Include="Assets\Logo.scale240.png" />
+    <Content Include="Assets\mobile.png" />
+    <Content Include="Assets\orderhistory.png" />
+    <Content Include="Assets\payadd.png" />
+    <Content Include="Assets\payment_creitcard_active.PNG" />
+    <Content Include="Assets\payment_del_icon.PNG" />
+    <Content Include="Assets\prepaid_contacts_icon.png" />
+    <Content Include="Assets\profileimage.png" />
+    <Content Include="Assets\Profileuser.png" />
+    <Content Include="Assets\savedcards.png" />
+    <Content Include="Assets\sendwithadraw.png" />
+    <Content Include="Assets\SmallLogo.scale-240.png" />
+    <Content Include="Assets\SplashScreen.scale-240.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square71x71Logo.scale-100.png" />
+    <Content Include="Assets\Square71x71Logo.scale-240.png" />
+    <Content Include="Assets\StoreLogo.scale-240.png" />
+    <Content Include="Assets\television.png" />
+    <Content Include="Assets\transaction.png" />
+    <Content Include="Assets\wallet_icon.PNG" />
+    <Content Include="Assets\water-tap.png" />
+    <Content Include="Assets\WideLogo.scale-240.png" />
+    <Content Include="infofile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Assets\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\Agent Request\Request For Agent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\BottomNavigationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\Add Address.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\home\AddNewAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\Addnewcard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\BroadbandView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\cableTvVView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\dataCardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\dthView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\EditAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\EditProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\electricityView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\homeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\landlineView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\mobileRechargeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\offerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\Orderhistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\profileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\QRScanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\SaveCards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\walletView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\home\WaterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\loginAndRegistation\AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\loginAndRegistation\changepassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\loginAndRegistation\Editprofile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\loginAndRegistation\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\loginAndRegistation\MyProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\loginAndRegistation\signupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\loginAndRegistation\TermsofService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\popup\ContentDialog1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\popup\ContentDialog2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\popup\ContentDialog3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\popup\ContentDialog4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\Testpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>packages\Caliburn.Micro.Core.3.2.0\lib\portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0\Caliburn.Micro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>packages\Caliburn.Micro.3.2.0\lib\wpa81\Caliburn.Micro.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>packages\Caliburn.Micro.3.2.0\lib\wpa81\Caliburn.Micro.Platform.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\portable-win81+wpa81\Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kulman.WPA81, Version=1.0.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Kulman.WPA81.1.0.19\lib\portable-win81+wpa81\Kulman.WPA81.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactions, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Caliburn.Micro.3.2.0\lib\wpa81\Microsoft.Xaml.Interactions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Interactivity, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Caliburn.Micro.3.2.0\lib\wpa81\Microsoft.Xaml.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.Ninject.3.3.1\lib\Wpa81\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net.Platform.WinRT, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SQLite.Net-PCL.3.1.1\lib\portable-win81+wpa81\SQLite.Net.Platform.WinRT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\wpa81\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WinRTXamlToolkit, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\git_Payzan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRTXamlToolkit.Controls.Gauge, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\git_Payzan\packages\WinRTXamlToolkit.Controls.Gauge.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Gauge.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.2.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.2\lib\netstandard1.1\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\Sinhala\Resources.resw" />
+    <PRIResource Include="Assets\Resources.resw" />
+    <None Include="Help\Lumia Imaging SDK.chm" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Strings\en-US\Resources.resw">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generator>ResXFileCodeGenerator custom tool</Generator>
+    </EmbeddedResource>
+    <PRIResource Include="Strings\hi-IN\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Phone</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WP81, Version=3.21.0">
+      <Name>SQLite for Windows Phone 8.1</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="packages\LumiaImagingSDK.2.0.208\build\wpa81\LumiaImagingSDK.targets" Condition="Exists('packages\LumiaImagingSDK.2.0.208\build\wpa81\LumiaImagingSDK.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\LumiaImagingSDK.2.0.208\build\wpa81\LumiaImagingSDK.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\LumiaImagingSDK.2.0.208\build\wpa81\LumiaImagingSDK.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

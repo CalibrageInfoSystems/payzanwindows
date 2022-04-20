@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-RJHPVF7</Machine>
+    <WindowsUser>Calibrage24</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>0def9d01-5c4d-43e4-9b1c-ca591555a95a</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Calibrage09</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\obj\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\PayZan.exe">
+      <PackagePath>PayZan.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\Facebook.7.0.6\lib\portable-win81+wpa81\Facebook.dll">
+      <PackagePath>Facebook.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\Portable.Ninject.3.3.1\lib\Wpa81\Ninject.dll">
+      <PackagePath>Ninject.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll">
+      <PackagePath>SQLite.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\SQLite.Net-PCL.3.1.1\lib\portable-win81+wpa81\SQLite.Net.Platform.WinRT.dll">
+      <PackagePath>SQLite.Net.Platform.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.dll">
+      <PackagePath>WinRTXamlToolkit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\1.jpg">
+      <PackagePath>Assets\1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\1300 x 250.jpg">
+      <PackagePath>Assets\1300 x 250.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\1300x200.jpg">
+      <PackagePath>Assets\1300x200.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\2.jpg">
+      <PackagePath>Assets\2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\3.jpg">
+      <PackagePath>Assets\3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\4.jpg">
+      <PackagePath>Assets\4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\5.JPG">
+      <PackagePath>Assets\5.JPG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\950  x 150.jpg">
+      <PackagePath>Assets\950  x 150.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\950 x 100.JPG">
+      <PackagePath>Assets\950 x 100.JPG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\banner.JPG">
+      <PackagePath>Assets\banner.JPG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\back_arrow.png">
+      <PackagePath>Assets\back_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\bank_icon.PNG">
+      <PackagePath>Assets\bank_icon.PNG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\dth_electricity.PNG">
+      <PackagePath>Assets\dth_electricity.PNG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\dth_icon.PNG">
+      <PackagePath>Assets\dth_icon.PNG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\electricity.png">
+      <PackagePath>Assets\electricity.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\eye-hide.png">
+      <PackagePath>Assets\eye-hide.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\eye-show.png">
+      <PackagePath>Assets\eye-show.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\footer_home_icon.png">
+      <PackagePath>Assets\footer_home_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\footer_offers_icon.png">
+      <PackagePath>Assets\footer_offers_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\footer_user_icon.png">
+      <PackagePath>Assets\footer_user_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\footer_wallet_icon.png">
+      <PackagePath>Assets\footer_wallet_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\head_notification_icon.png">
+      <PackagePath>Assets\head_notification_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\head_search_icon.png">
+      <PackagePath>Assets\head_search_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\internet.png">
+      <PackagePath>Assets\internet.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\landline_icon.PNG">
+      <PackagePath>Assets\landline_icon.PNG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\logo.png">
+      <PackagePath>Assets\logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\Logo.scale240.png">
+      <PackagePath>Assets\Logo.scale240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\mobile.png">
+      <PackagePath>Assets\mobile.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\payadd.png">
+      <PackagePath>Assets\payadd.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\prepaid_contacts_icon.png">
+      <PackagePath>Assets\prepaid_contacts_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\sendwithadraw.png">
+      <PackagePath>Assets\sendwithadraw.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\television.png">
+      <PackagePath>Assets\television.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\transaction.png">
+      <PackagePath>Assets\transaction.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\up-arrow %281%29.png">
+      <PackagePath>Assets\up-arrow %281%29.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\wallet_icon.PNG">
+      <PackagePath>Assets\wallet_icon.PNG</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\water-tap.png">
+      <PackagePath>Assets\water-tap.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\infofile.txt">
+      <PackagePath>infofile.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\PayZan.xr.xml">
+      <PackagePath>PayZan.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\Assets\Dictionary1.xbf">
+      <PackagePath>Assets\Dictionary1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\Agent Request\Request For Agent.xbf">
+      <PackagePath>views\Agent Request\Request For Agent.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\BottomNavigationView.xbf">
+      <PackagePath>views\BottomNavigationView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\BlankPage1.xbf">
+      <PackagePath>views\home\BlankPage1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\cableTvVView.xbf">
+      <PackagePath>views\home\cableTvVView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\dataCardView.xbf">
+      <PackagePath>views\home\dataCardView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\dthView.xbf">
+      <PackagePath>views\home\dthView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\electricityView.xbf">
+      <PackagePath>views\home\electricityView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\homeScreen.xbf">
+      <PackagePath>views\home\homeScreen.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\landlineView.xbf">
+      <PackagePath>views\home\landlineView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\mobileRechargeView.xbf">
+      <PackagePath>views\home\mobileRechargeView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\offerView.xbf">
+      <PackagePath>views\home\offerView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\profileView.xbf">
+      <PackagePath>views\home\profileView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\home\walletView.xbf">
+      <PackagePath>views\home\walletView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\loginAndRegistation\LoginView.xbf">
+      <PackagePath>views\loginAndRegistation\LoginView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\views\loginAndRegistation\signupView.xbf">
+      <PackagePath>views\loginAndRegistation\signupView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml">
+      <PackagePath>WinRTXamlToolkit\WinRTXamlToolkit.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\AlternativeFrame\AlternativeFrame.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\AlternativeFrame\AlternativeFrame.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\AnimatingContainer\AnimatingContainer.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\AnimatingContainer\AnimatingContainer.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\AutoCompleteTextBox\AutoCompleteTextBox.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\AutoCompleteTextBox\AutoCompleteTextBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CameraCaptureControl\CameraCaptureControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CameraCaptureControl\CameraCaptureControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CascadingImageControl\CascadingImageControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CascadingImageControl\CascadingImageControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CascadingTextBlock\CascadingTextBlock.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CascadingTextBlock\CascadingTextBlock.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ColorPicker\ColorPicker.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ColorPicker\ColorPicker.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CountdownControl\CountdownControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CountdownControl\CountdownControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CustomGridSplitter\CustomGridSplitter.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CustomGridSplitter\CustomGridSplitter.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\DelayedLoadControl\DelayedLoadControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\DelayedLoadControl\DelayedLoadControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\FocusVisualizer\FocusVisualizer.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\FocusVisualizer\FocusVisualizer.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\FxContentControl\FxContentControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\FxContentControl\FxContentControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ImageButton\ImageButton.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ImageButton\ImageButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ImageToggleButton\ImageToggleButton.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ImageToggleButton\ImageToggleButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\InputDialog\InputDialog.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\InputDialog\InputDialog.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ListItemButton\ListItemButton.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ListItemButton\ListItemButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\NumericUpDown\NumericUpDown.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\NumericUpDown\NumericUpDown.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ToolStrip\ToolStrip.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ToolStrip\ToolStrip.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ToolWindow\ToolWindow.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ToolWindow\ToolWindow.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeView.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeViewItem.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewItem.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeViewMouse.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewMouse.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeViewTouch.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewTouch.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\WatermarkPasswordBox\WatermarkPasswordBox.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\WatermarkPasswordBox\WatermarkPasswordBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\WatermarkTextBox\WatermarkTextBox.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\WatermarkTextBox\WatermarkTextBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Themes\Generic.xbf">
+      <PackagePath>WinRTXamlToolkit\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Calibrage24\Documents\Visual Studio 2015\PAYZAN\PayZan\PayZan\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

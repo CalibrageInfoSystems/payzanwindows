@@ -1,0 +1,231 @@
+﻿<Page
+    x:Class="PayZan.views.home.walletView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views.home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+
+    <Grid Background="white">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="PullToRefreshStates">
+                <VisualState x:Name="Idle"/>
+                <VisualState x:Name="Refreshing">
+                    <Storyboard RepeatBehavior="Forever">
+                        <DoubleAnimation Storyboard.TargetName="refreshIndicator"
+                                         Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)"
+                                         From="90" To="360"></DoubleAnimation>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+            <Image Height="70" Source="ms-appx:///Assets/1300x200.jpg"  Stretch="Fill" ></Image>
+        </StackPanel>
+        <Border Background="#FF8D2029" Grid.Row="1"/>
+        <Image  Source="/Assets/back_arrow.png" Grid.Row="1" HorizontalAlignment="Left" Tapped="Image_Tapped" Margin="7,10,0,10" ></Image>
+        <Image Source="/Assets/head_notification_icon.png " Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <TextBlock x:Name="textblk" Grid.Row="1" FontWeight="Bold" Text=" My Wallet"  FontSize="15" VerticalAlignment="Center" Margin="0,12,0,3" HorizontalAlignment="Right" Width="361" Height="25" />
+
+        <StackPanel  Grid.Column="0" Grid.Row="2">
+            <Image Height="70" Source="ms-appx:///Assets/banner.JPG" Stretch="Fill" ></Image>
+        </StackPanel>
+        <TextBlock x:Name="text_balance" Grid.Row="2" Text="Wallet Balance :" FontSize="16"  HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,3,0,27"></TextBlock>
+        <!--here is the code for send money to wallet-->
+
+        <Pivot x:Name="rootPivot" FontSize="4"   Grid.Row="2" SelectionChanged="rootPivot_SelectionChanged" Margin="0" Height="463" Grid.RowSpan="2" VerticalAlignment="Bottom"  >
+            <PivotItem    Margin="0,15,0,10" Background="White">
+                <PivotItem.Header >
+
+                    <!--<Grid Height="60">-->
+                    <TextBlock VerticalAlignment="Center" x:Name="textblock" Foreground="#FF8D2029" Height="60" FontSize="14" FontWeight="Bold" Text="Send Money to Wallet" Margin="0,20,0,0" />
+                    <!--</Grid>-->
+                </PivotItem.Header>
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="65"/>
+                        <RowDefinition Height="65"/>
+                        <RowDefinition Height="65"/>
+                        <RowDefinition Height="60"/>
+
+                    </Grid.RowDefinitions>
+
+                    <TextBox x:Name="text_mobilenumber" Grid.Row="0" PlaceholderText="Mobile Number" InputScope="Number" FontFamily="Calibri" KeyUp="text_mobilenumber_KeyUp" KeyDown="text_mobilenumber_KeyDown"
+                              BorderBrush="#FF130F0F" BorderThickness="0.5" Height="35" Margin="10,0.333,10,0"></TextBox>
+                    <Image x:Name="contact_img"  Source="/Assets/prepaid_contacts_icon.png"  Tapped="contact_img_Tapped"  Grid.Row="0" HorizontalAlignment="Right" Margin="0,0,10,30" Width="40" ></Image>
+
+                    <TextBlock x:Name="lbl_mobilenumber"  Grid.Row="0" HorizontalAlignment="Left" Foreground="Red" FontSize="14" VerticalAlignment="Bottom" Margin="11,0,0,0" Width="361" Height="25" ></TextBlock>
+
+
+                    <TextBox x:Name="text_amount" Grid.Row="1" PlaceholderText="Amount" MaxLength="6"  KeyUp="text_amount_KeyUp" InputScope="Number" FontFamily="Calibri" KeyDown="text_amount_KeyDown"
+                              BorderBrush="#FF130F0F" BorderThickness="0.5" Height="35" Margin="10,0.333,10,0" TextChanged="text_amount_TextChanged"></TextBox>
+                    <TextBlock x:Name="lbl_amount"  Grid.Row="1" HorizontalAlignment="Left" Foreground="Red" FontSize="14" VerticalAlignment="Bottom" Margin="12,0,0,0" Width="361" Height="25" ></TextBlock>
+
+                    <TextBox x:Name="text_Comment" Grid.Row="2" PlaceholderText="Comment(optional)" FontFamily="Calibri" KeyDown="text_Comment_KeyDown"
+                              BorderBrush="#FF130F0F" BorderThickness="0.5" Height="35" Margin="10,3,10,0"></TextBox>
+                    <TextBlock x:Name="lbl_Comment" Grid.Row="2" HorizontalAlignment="Left" Foreground="Red" FontSize="14" VerticalAlignment="Bottom" Margin="19,0,0,0" Width="361" ></TextBlock>
+
+                    <Button x:Name="Sendmoney_btn" Content="Send money" Click="Sendmoney_btn_Click" Grid.Row="3"  Height="45" Width="330" Margin="31,0,0,0">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#5F1a58" Offset="0"/>
+                                <GradientStop Color="#8d2028" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+
+                </Grid>
+            </PivotItem>
+
+            <!--here is the code for add money to wallet-->
+            <PivotItem    Margin="0,15,0,10">
+                <PivotItem.Header>
+                    <!--<Grid Height="60">-->
+                    <TextBlock VerticalAlignment="Center" x:Name="textblock1" Foreground="#FF8D2029" FontWeight="Bold" Height="40" FontSize="14" Text="Add Money to Wallet" Margin="0,20,0,0"></TextBlock>
+                    <!--</Grid>-->
+                </PivotItem.Header>
+                <Grid Background="white">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="button1" Content="100+" MinWidth="90" Click="button1_Click" Foreground=" #FF8D2029" BorderBrush="#FF8D2029" BorderThickness="0.5" Grid.Row="0" Grid.Column="0" Margin="25,1,0,2"     />
+                    <Button x:Name="button2" Content="500+" MinWidth="90" Click="button2_Click" Foreground=" #FF8D2029" BorderBrush="#FF8D2029" BorderThickness="0.5" Grid.Row="0" Grid.Column="1" Margin="21,1,0,2"   />
+                    <Button x:Name="button3" Content="1000+" MinWidth="90" Click="button3_Click"  Foreground=" #FF8D2029" BorderBrush="#FF8D2029"  BorderThickness="0.5" Grid.Column="2" Grid.Row="0" Margin="15,0,0,0"   ></Button>
+
+
+                    <TextBox x:Name="text_Enteramount" Grid.Row="1" InputScope="Number" Grid.ColumnSpan="3" MaxLength="6" KeyUp="text_Enteramount_KeyUp" PlaceholderText="Enter amount to be added in the wallet" FontFamily="Calibri" KeyDown="text_Enteramount_KeyDown"
+                              BorderBrush="#FF130F0F" BorderThickness="0.5" Height="35" Margin="10,0.333,10,0"></TextBox>
+
+
+                    <TextBlock x:Name="lbl_Enteramount"  Grid.Row="1"  HorizontalAlignment="Left" Grid.ColumnSpan="3" Foreground="Red" FontSize="14" VerticalAlignment="Bottom" Margin="14,4,0,5" ></TextBlock>
+
+                    <TextBox x:Name="text_promo" Grid.Row="2" Grid.ColumnSpan="3" PlaceholderText="Enter Promo Code" FontFamily="Calibri" KeyDown="text_amout_KeyDown"
+                              BorderBrush="#FF130F0F" BorderThickness="0.5" Height="35" Margin="10,0.333,10,0"></TextBox>
+
+                    <Button x:Name="Addmoney" Content="Add money" Click="Addmoney_Click"  Grid.ColumnSpan="3" Grid.Row="3" Margin="25,1,0,2" Width="350">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#5F1a58" Offset="0"/>
+                                <GradientStop Color="#8d2028" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+
+                </Grid>
+            </PivotItem>
+
+            <PivotItem    Margin="0,15,0,10">
+                <PivotItem.Header >
+                    <!--<Grid Height="60">-->
+                    <TextBlock VerticalAlignment="Center" x:Name="textblock2" FontWeight="Bold" Foreground="#FF8D2029" Height="40" FontSize="14" Text="My Transactions" Margin="0,20,0,0" ></TextBlock>
+                    <!--</Grid>-->
+                </PivotItem.Header>
+
+
+                <ListView  Grid.Row="0"    Grid.Column="0" Name="Transaction"  IsItemClickEnabled="True"  ScrollViewer.VerticalScrollBarVisibility="Visible"  Margin="39,0,0,0"   >
+
+                    <ListView.ItemTemplate >
+                        <DataTemplate >
+                            <StackPanel Orientation="Horizontal" >
+                                <Image HorizontalAlignment="Left" Source="{Binding ImageUrl}"  Width="25" Height="25" Stretch="Fill"></Image>
+                                <TextBlock Width="150" HorizontalAlignment="Left" MinWidth="100"  TextAlignment="Center"   Text="{Binding Name}"  Foreground="#FF8D2029" ></TextBlock>
+                                <TextBlock Width="80" HorizontalAlignment="Right" TextAlignment="Right"   Text="{Binding Money}" Foreground="Black" ></TextBlock>
+
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+            </PivotItem>
+        </Pivot>
+
+
+        <ScrollViewer Grid.Row="2" x:Name="pullToRefreshScroller" 
+                      Height="400" 
+                      VerticalAlignment="Top" 
+                      HorizontalScrollMode="Disabled" 
+                      HorizontalScrollBarVisibility="Hidden" 
+                      VerticalScrollMode="Auto" 
+                      VerticalScrollBarVisibility="Hidden" 
+                      ViewChanged="pullToRefreshScroller_ViewChanged">
+
+            <StackPanel >
+                <Border x:Name="refreshVisual"  Height="100" >
+                    <Image x:Name="refreshIndicator" Source="/Assets/Loadingimage.gif"
+                           RenderTransformOrigin="0.5,0.5" Margin="0,31,0,27" Width="28">
+
+                        <Image.RenderTransform>
+                            <RotateTransform x:Name="rotationimg" Angle="0"/>
+                        </Image.RenderTransform>
+                    </Image>
+                </Border>
+                <ListView x:Name="listView" Height="400" />
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+</Page>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+                  
+
+
+
+
+
+
+

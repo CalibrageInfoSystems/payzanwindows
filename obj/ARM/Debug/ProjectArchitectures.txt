@@ -1,0 +1,1 @@
+D:\Work\v1_payzan\PayZan.csproj;arm

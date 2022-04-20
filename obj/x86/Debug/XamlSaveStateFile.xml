@@ -1,0 +1,23 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\caliburn.micro.core.3.2.0\lib\portable-net45+win8+wp8+wpa81+monoandroid10+xamarin.ios10+monotouch10+uap10.0\caliburn.micro.dll" HashGuid="173e1b2e-a5e9-4c37-f35a-d4d82d1b0e53" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\caliburn.micro.3.2.0\lib\wpa81\caliburn.micro.platform.core.dll" HashGuid="4f505da3-2aa1-c8fa-410e-b6218c20366d" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\caliburn.micro.3.2.0\lib\wpa81\caliburn.micro.platform.dll" HashGuid="41a03c6a-aa62-7399-a29a-f552a54a6f69" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\bin\x86\debug\facebook.dll" HashGuid="b23a2499-2700-fb5e-a497-93d9e719fc0b" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\kulman.wpa81.1.0.19\lib\portable-win81+wpa81\kulman.wpa81.dll" HashGuid="ead474f6-da65-17df-1575-90c1c9f6a604" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\lumiaimagingsdk.2.0.208\lib\wpa81-hidden\x86\lumia.imaging.managed.dll" HashGuid="4995ac95-997b-6a34-dd96-7fb05ef15210" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\lumiaimagingsdk.2.0.208\lib\wpa81\x86\lumia.imaging.winmd" HashGuid="d16e02ff-554c-0883-c15e-9c1ee6c065c5" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\lumiaimagingsdk.2.0.208\lib\wpa81\x86\lumia.interopservices.windowsruntime.winmd" HashGuid="be026b97-4e17-03e1-494d-e8a25f3c2582" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\caliburn.micro.3.2.0\lib\wpa81\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\caliburn.micro.3.2.0\lib\wpa81\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\bin\x86\debug\newtonsoft.json.dll" HashGuid="e252f182-a27a-2e87-e780-fe0ba98fcc94" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\bin\x86\debug\ninject.dll" HashGuid="1e74cd0b-a4c6-d9e1-21f4-acd076160ccb" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\sqlite.net.core-pcl.3.1.1\lib\portable-win8+net45+wp8+wpa81+monoandroid1+monotouch1\sqlite.net.dll" HashGuid="2223cbf7-68d4-e5e4-e5e4-a19696ad83b6" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\sqlite.net-pcl.3.1.1\lib\portable-win81+wpa81\sqlite.net.platform.winrt.dll" HashGuid="1bc7eaa0-e36a-f105-20d8-c57b14216cea" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\system.runtime.interopservices.runtimeinformation.4.3.0\lib\wpa81\system.runtime.interopservices.runtimeinformation.dll" HashGuid="6560d00f-0bb0-0755-5423-c4e1bf779127" />
+    <ReferenceAssembly PathName="d:\git_payzan\packages\winrtxamltoolkit.controls.gauge.windowsphone.1.8.1.0\lib\wpa\winrtxamltoolkit.controls.gauge.dll" HashGuid="20b69e05-433d-7d04-9fd8-a9bca0e9d727" />
+    <ReferenceAssembly PathName="d:\git_payzan\packages\winrtxamltoolkit.windowsphone.1.8.1.0\lib\wpa\winrtxamltoolkit.dll" HashGuid="221e17c6-64f2-d53e-b7b5-145a2dbe921c" />
+    <ReferenceAssembly PathName="d:\work\v1_payzan\packages\zxing.net.0.16.2\lib\netstandard1.1\zxing.dll" HashGuid="0454191c-52ae-3db0-b403-cba636051b68" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

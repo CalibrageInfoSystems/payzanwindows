@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="PayZan.views.home.offerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views.home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Image Height="70" Source="ms-appx:///Assets/1300x200.jpg" Stretch="Fill" ></Image>
+        </StackPanel>
+        <Border Background="#FF8D2029" Grid.Row="1" Grid.ColumnSpan="2" ></Border>
+        <Image x:ConnectionId='1'  Source="/Assets/back_arrow.png" Grid.Row="1" HorizontalAlignment="Left" Margin="20,7,0,9"                      ></Image>
+        <TextBlock x:Name="textblck" Grid.Row="1" Grid.ColumnSpan="2" FontWeight="Bold" Text=" Add Money to Wallet" FontSize="16" VerticalAlignment="Center" Margin="55,0,0,0"></TextBlock>
+        <Image  Source="/Assets/wallet_icon.png" Grid.Row="2" HorizontalAlignment="Center" Margin="105,12,48,28" Width="61" ></Image>
+        <TextBlock   Text="Add Money to Wallet" Foreground="Black"    FontSize="16" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="159,0,65,10.333" Height="45"/>
+        <TextBox x:Name="textbox" PlaceholderText="Enter Amount to be added in wallet " FontFamily="Calibri" Grid.Row="3" Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC" Margin="19,32.167,19,0" ></TextBox>
+
+        <TextBox x:Name="textbox1" PlaceholderText=" Enter Promo Code" Grid.Row="4" Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC" Margin="19,21,19,0" FontFamily="Calibri" ></TextBox>
+
+
+        <Button x:ConnectionId='2'  Grid.Row="5"                      Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC"  Background="#FF8D2029" Content= "Add Money" Margin="35,19,0,18" Width="320" Height="63"></Button>
+    </Grid>
+</Page>
+

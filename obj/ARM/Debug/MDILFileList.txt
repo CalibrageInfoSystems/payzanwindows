@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <file>\Facebook.dll</file>
+  <file>\Newtonsoft.Json.dll</file>
+  <file>\Ninject.dll</file>
+  <file>\PayZan.exe</file>
+  <file>\SQLite.Net.dll</file>
+  <file>\WinRTXamlToolkit.Controls.Gauge.dll</file>
+  <file>\WinRTXamlToolkit.dll</file>
+  <file>\Lumia.Imaging.Managed.dll</file>
+  <file>\Lumia.Imaging.winmd</file>
+  <file>\Lumia.InteropServices.WindowsRuntime.winmd</file>
+  <file>\System.Runtime.InteropServices.RuntimeInformation.dll</file>
+  <file>\zxing.dll</file>
+  <file>\Caliburn.Micro.dll</file>
+  <file>\Caliburn.Micro.Platform.Core.dll</file>
+  <file>\Caliburn.Micro.Platform.dll</file>
+  <file>\Kulman.WPA81.dll</file>
+  <file>\Microsoft.Xaml.Interactions.dll</file>
+  <file>\Microsoft.Xaml.Interactivity.dll</file>
+  <file>\SQLite.Net.Platform.WinRT.dll</file>
+</Files>

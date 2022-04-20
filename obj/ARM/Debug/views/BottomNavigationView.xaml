@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="PayZan.views.BottomNavigationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+
+    <Frame x:Name="nav1"></Frame>
+
+
+
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Height="80" Source="ms-appx:///Assets/1300x200.jpg" Grid.Column="0" Grid.Row="0" Stretch="Fill" ></Image>
+        <Frame x:Name="nav1" Grid.Column="0" Grid.Row="1">
+            
+    </Frame>
+    </Grid>-->
+
+    <Page.BottomAppBar>
+        <CommandBar Background="#FFE2E0E0">
+            <AppBarButton x:ConnectionId='1' Label="Home"                             RenderTransformOrigin="0.5,0.5" Background="Black" RequestedTheme="Dark">
+                <AppBarButton.RenderTransform>
+                    <CompositeTransform TranslateX="1" TranslateY="1"/>
+                </AppBarButton.RenderTransform>
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/footer_home_icon.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton x:ConnectionId='2' Name="nav_profile" Label="Profile"                             >
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/footer_user_icon.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+          
+            <AppBarButton x:ConnectionId='3' Label="Wallet"                             >
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/footer_wallet_icon.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton x:ConnectionId='4' Label="Offers"                             >
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="ms-appx:///Assets/footer_offers_icon.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
+

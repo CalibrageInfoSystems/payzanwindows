@@ -1,0 +1,355 @@
+﻿<Page
+    x:Class="PayZan.views.home.Orderhistory"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views.home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Image Height="75"
+                  
+                   Source="ms-appx:///Assets/1300x200.jpg"
+                   Stretch="Fill">
+            </Image>
+        </StackPanel>
+
+        <Border Grid.Row="1">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#8d2029"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Image x:ConnectionId='1' x:Name="Backarrow_img" 
+               Source="/Assets/back_arrow.png"
+               Grid.Column="0" 
+               Grid.Row="1" 
+               Canvas.ZIndex="22" 
+               HorizontalAlignment="Left" 
+               Margin="11,0,0,0"
+               Width="24"
+               Height="40"
+                                            >
+
+        </Image>
+        <TextBlock Text="Order History"
+                   Grid.Row="1"
+                   Margin="51,-2,0,0"
+                   FontSize="20" 
+                   FontFamily="Calibri" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left">
+        </TextBlock>
+        
+       <!--here is the first one-->
+        
+        <Rectangle  Opacity="0.3"
+                    Grid.Row="2" 
+                    RenderTransformOrigin="0,0"
+                    StrokeThickness="2" 
+                    StrokeDashCap="Round"
+                    StrokeEndLineCap="Round" 
+                    StrokeLineJoin="Round" 
+                    StrokeStartLineCap="Round"
+                    Stroke="#FFEAB1B1" Margin="10,8,29,14.667"
+                    RadiusX="5" RadiusY="5">
+            <Rectangle.RenderTransform>
+                <CompositeTransform ScaleX="1.05" ScaleY="1.05"  />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        
+        <TextBlock Text="Payzan Cash" 
+                   Foreground="#FF8D2029"
+                   Grid.Row="2"
+                   FontSize="16" 
+                   Margin="29,19,0,0"></TextBlock>
+      
+        <TextBlock Text="Rs 500" 
+                   Foreground="#FF575050"
+                   Grid.Row="2"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Margin="31,13,0,0">
+        </TextBlock>
+
+        <Line Stretch="Fill" Grid.Row="2"
+              Stroke="gray" X1="100" 
+              Y2="0" Margin="10,2,10,30">
+        </Line>
+
+        <TextBlock Text="17/11/2017" 
+                   Foreground="#FF575050"
+                   Grid.Row="2"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center" 
+                   Margin="0,1,85,67">
+        </TextBlock>
+        
+        <TextBlock Text="8:00pm" 
+                   Foreground="#FF575050"
+                   Grid.Row="2"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   Margin="0,21,17,1">
+        </TextBlock>
+        <TextBlock Text="Payment Successful" 
+                   Foreground="Green"
+                   Grid.Row="2"
+                   FontSize="16" 
+                  
+                   VerticalAlignment="Bottom" Margin="29,-1,0,21">
+
+        </TextBlock>
+        <Button x:Name="repeat_btn"
+                Content="Repeat"
+                Background="#FF8D2029"
+                Grid.Row="2"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0,0,28,16">
+        </Button>
+        
+        <!--hers is the second one-->
+        
+        <Rectangle  Opacity="0.3"
+                    Grid.Row="3" 
+                    RenderTransformOrigin="0,0" 
+                    StrokeThickness="2" 
+                    StrokeDashCap="Round"
+                    StrokeEndLineCap="Round" 
+                    StrokeLineJoin="Round" 
+                    StrokeStartLineCap="Round"
+                    Stroke="#FFEAB1B1" RadiusX="5" 
+                    RadiusY="5" Margin="10,8,29,14.667" >
+           <Rectangle.RenderTransform>
+                <CompositeTransform ScaleX="1.05" ScaleY="1.05"  />
+           </Rectangle.RenderTransform>
+        </Rectangle>
+        
+        <TextBlock Text="Payzan Cash" 
+                   Foreground="#FF8D2029"
+                   Grid.Row="3"
+                   FontSize="16" 
+                   Margin="29,19,0,0">
+            
+        </TextBlock>
+        
+              <TextBlock Text="Rs 400" 
+                   Foreground="#FF575050"
+                   Grid.Row="3"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Margin="31,13,0,0">
+        </TextBlock>
+
+        <Line Stretch="Fill" Grid.Row="3"
+              Stroke="gray" X1="100" 
+              Y2="0" Margin="10,2,10,30">
+        </Line>
+
+        <TextBlock Text="17/11/2017" 
+                   Foreground="#FF575050"
+                   Grid.Row="3"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center" 
+                   Margin="0,1,85,67">
+        </TextBlock>
+
+        <TextBlock Text="8:00pm" 
+                   Foreground="#FF575050"
+                   Grid.Row="3"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   Margin="0,21,17,5">
+        </TextBlock>
+        
+        <TextBlock Text="Payment Failed" 
+                   Foreground="#FF8D2029"
+                   Grid.Row="3"
+                   FontSize="16" 
+                   VerticalAlignment="Bottom"
+                   Margin="29,-1,0,21">
+
+        </TextBlock>
+        <Button x:Name="retry_btn"
+                Content="Retry"
+                Background="#FF8D2029"
+                Grid.Row="3"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0,0,28,16">
+        </Button>
+        
+        <!--here is the third one-->
+        
+        <Rectangle  Opacity="0.3"
+                    Grid.Row="4" 
+                    RenderTransformOrigin="0,0"
+                    StrokeThickness="2" 
+                    StrokeDashCap="Round"
+                    StrokeEndLineCap="Round" 
+                    StrokeLineJoin="Round" 
+                    StrokeStartLineCap="Round"
+                    Stroke="#FFEAB1B1" Margin="10,8,29,14.667"
+                    RadiusX="5" RadiusY="5">
+            <Rectangle.RenderTransform>
+                <CompositeTransform ScaleX="1.05" ScaleY="1.05"  />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <TextBlock Text="Payzan Cash" 
+                   Foreground="#FF8D2029"
+                   Grid.Row="4"
+                   FontSize="16" 
+                   Margin="29,19,0,0"></TextBlock>
+
+        <TextBlock Text="Rs 300" 
+                   Foreground="#FF575050"
+                   Grid.Row="4"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Margin="31,13,0,0">
+        </TextBlock>
+
+        <Line Stretch="Fill" Grid.Row="4"
+              Stroke="gray" X1="100" 
+              Y2="0" Margin="10,2,10,30">
+        </Line>
+
+        <TextBlock Text="17/11/2017" 
+                   Foreground="#FF575050"
+                   Grid.Row="4"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center" 
+                    Margin="0,1,85,67">
+        </TextBlock>
+        <TextBlock Text="Payment Successful" 
+                   Foreground="Green"
+                   Grid.Row="4"
+                   FontSize="16" 
+                  
+                   VerticalAlignment="Bottom" Margin="29,-1,0,21">
+
+        </TextBlock>
+        <TextBlock Text="8:00pm" 
+                   Foreground="#FF575050"
+                   Grid.Row="4"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   Margin="0,23,17,1">
+        </TextBlock>
+
+        <Button x:Name="repeat1_btn"
+                Content="Repeat"
+                Background="#FF8D2029"
+                Grid.Row="4"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0,0,28,16">
+        </Button>
+        
+        <!--here is the fourth one-->
+        
+        <Rectangle  Opacity="0.3"
+                    Grid.Row="5" 
+                    RenderTransformOrigin="0,0" 
+                    StrokeThickness="2" 
+                    StrokeDashCap="Round"
+                    StrokeEndLineCap="Round" 
+                    StrokeLineJoin="Round" 
+                    StrokeStartLineCap="Round"
+                    Stroke="#FFEAB1B1" RadiusX="5" 
+                    RadiusY="5" Margin="10,8,29,14.667" >
+            <Rectangle.RenderTransform>
+                <CompositeTransform ScaleX="1.05" ScaleY="1.05"  />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <TextBlock Text="Payzan Cash" 
+                   Foreground="#FF8D2029"
+                   Grid.Row="5"
+                   FontSize="16" 
+                   Margin="29,19,0,0">
+
+        </TextBlock>
+       
+        <TextBlock Text="Rs 400" 
+                   Foreground="#FF575050"
+                   Grid.Row="5"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Margin="31,13,0,0">
+        </TextBlock>
+
+        <Line Stretch="Fill" Grid.Row="5"
+              Stroke="gray" X1="100" 
+              Y2="0" Margin="10,2,10,30">
+        </Line>
+
+        <TextBlock Text="17/11/2017" 
+                   Foreground="#FF575050"
+                   Grid.Row="5"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center" 
+                   Margin="0,1,85,67">
+        </TextBlock>
+       <TextBlock Text="Payment Failed" 
+                   Foreground="#FF8D2029"
+                   Grid.Row="5"
+                   FontSize="16" 
+                   VerticalAlignment="Bottom"
+                   Margin="29,-1,0,21">
+
+        </TextBlock>
+        <TextBlock Text="8:00pm" 
+                   Foreground="#FF575050"
+                   Grid.Row="5"
+                   FontSize="16"
+                   HorizontalAlignment="Right"
+                   Margin="0,21,17,1">
+        </TextBlock>
+
+        <Button x:Name="retry1_btn"
+                Content="Retry"
+                Background="#FF8D2029"
+                Grid.Row="5"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0,0,28,16">
+        </Button>
+    </Grid>
+</Page>
+

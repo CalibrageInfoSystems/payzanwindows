@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="PayZan.views.loginAndRegistation.signupView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views.loginAndRegistation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <ScrollViewer>
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="65"/>
+                <RowDefinition Height="50"/>
+
+
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition  Height="50"/>
+            </Grid.RowDefinitions>
+            <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4">
+                <Image Height="70" Source="ms-appx:///Assets/1300x200.jpg" Stretch="Fill" ></Image>
+            </StackPanel>
+            <Border Grid.Row="1">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#8d2029"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Image Source="/Assets/back_arrow.png" Grid.Column="0" Grid.Row="1" Canvas.ZIndex="22" HorizontalAlignment="Left" Margin="11,0,0,0" Width="24" Height="40" Tapped="Image_Tapped_1"></Image>
+            <TextBlock Text="Sign Up" Grid.Row="1" Margin="51,-7,0,0" FontSize="20" FontFamily="Calibri" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
+            <!--<Image Source="/Assets/logo.png" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="113,0.333,128,16.5" Canvas.ZIndex="24" Height="34" Width="159"/>-->
+            <TextBox Grid.Row="3" PlaceholderText="+94 Mobile Number" InputScope="Number" KeyUp="txt_MobileNumber_KeyUp" MaxLength="13" BorderThickness="0.5" BorderBrush="Gray" x:Name="txt_MobileNumber" Margin="15,3,15,0" FontSize="16" FontFamily="Calibri" Height="0" KeyDown="txt_MobileNumber_KeyDown">
+            </TextBox>
+            <TextBlock HorizontalAlignment="Left"  Grid.Row="3" FontSize="14" Name="lbl_mobilenumber"  Foreground="Red" Margin="17,36.333,0,45.167" Grid.RowSpan="2"/>
+
+            <TextBox Grid.Row="4" PlaceholderText="Email" InputScope="EmailSmtpAddress" BorderThickness="0.5" BorderBrush="Gray" x:Name="txt_Email" Margin="15,7,15,0"  FontSize="16" FontFamily="Calibri" KeyDown="txt_Email_KeyDown"/>
+            <TextBlock HorizontalAlignment="Left" Grid.Row="4" FontSize="14" Name=" lbl_email"  Foreground="Red" Margin="17,46,10,0"/>
+
+            <PasswordBox  Visibility="Visible" Grid.Row="5"  PlaceholderText="Create a Password" BorderThickness="0.5" BorderBrush="Gray" x:Name="txt_Password" Margin="15,6,15,0"  FontSize="18" FontFamily="Calibri" Height="35"/>
+            <TextBox Visibility="Collapsed" Name="txt_password1" PlaceholderText="Create a Password" Grid.Row="5" BorderThickness="0.5" BorderBrush="Gray"  Margin="15,6,15,0" FontSize="16" FontFamily="Calibri"/>
+            <TextBlock HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" FontSize="12" Name=" lbl_password"   Foreground="Red" Margin="17,44,0,0" Width="383"/>
+            <Image Name="image"  Source="{Binding image}" Grid.Row="5" Margin="284,6,-52,24" Tapped="Image_Tapped"/>
+
+
+            <PasswordBox Name="txt_conpassword" FontFamily="Calibri"  BorderThickness="0.5" BorderBrush="Gray" PlaceholderText="Confirm Password" Margin="15,7,15,0" FontSize="18" Grid.Row="6"  Height="35"  />
+            <TextBox Visibility="Collapsed" Name="txt_conpassword1" Grid.Row="6" BorderThickness="0.5" PlaceholderText="Confirm Password" BorderBrush="Gray"  Margin="15,7,15,0" FontSize="16" FontFamily="Calibri"/>
+            <TextBlock HorizontalAlignment="Left" Grid.Row="6"   FontSize="14" TextWrapping="Wrap" Name=" lbl_conformpassword" Margin="16,40,10,0" Foreground="Red"/>
+            <Image Name="img_password" Source="{Binding image}" Grid.Row="6" Margin="284,6,-52,24" Tapped="img_password_Tapped"  ></Image>
+
+
+            <TextBlock  Grid.Row="7" FontFamily="Calibri" Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Padding="15,0" FontSize="12" Margin="0,14,0,0">On Sign Up, you accept our <Run Foreground="#8d2029" Text="Term's &amp; Conditions"></Run> and <Run Foreground="#8d2029" Text="Privacy Policy"></Run></TextBlock>
+
+            <Button Grid.Row="8" Content="Sign Up" BorderThickness="0.5" Name="signup"  Width="364" Margin="18,-3,18,-2.333" Click="signup_Click" FontSize="14" HorizontalAlignment="Center">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#5F1a58" Offset="0"/>
+                        <GradientStop Color="#8d2028" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBlock  Grid.Row="9" Margin="-8,8,10,0" FontSize="16" FontFamily="Calibri" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top">Already have an account..?</TextBlock>
+            <TextBlock Grid.Row="9" Foreground="#8d2029" Margin="270,0,60,5" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontWeight="Bold" Tapped="TextBlock_Tapped" Height="30" Width="47">Login</TextBlock>
+            <TextBlock Text="-or-" Foreground="Black" Grid.Row="10" Margin="161,-11,0,5.333" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10,0"/>
+            <Button Content="Signin With Facebook" Grid.Column="0" Grid.Row="11" Background="#3b5998" FontSize="18" Height="60" Width="333" FontFamily="Calibri" VerticalAlignment="Top" Margin="30,-9.333,0,-0.667"/>
+            <Button Content="Signin With Google" Grid.Column="0" Grid.Row="12" Background="#F44336" FontSize="18" Height="58" Width="333" FontFamily="Calibri" VerticalAlignment="Bottom" Margin="30,0,0,1" />
+
+
+
+        </Grid>
+
+    </ScrollViewer>
+</Page>

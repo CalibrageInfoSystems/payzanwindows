@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="PayZan.views.loginAndRegistation.TermsofService"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views.loginAndRegistation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition />
+           
+
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Image Height="75"
+                  
+                   Source="ms-appx:///Assets/1300x200.jpg"
+                   Stretch="Fill">
+            </Image>
+            
+            
+        </StackPanel>
+
+        <Border Grid.Row="1">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#8d2029"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Image x:Name="Backarrow_img" 
+               Source="/Assets/back_arrow.png"
+               Grid.Column="0" 
+               Grid.Row="1" 
+               Tapped="Backarrow_img_Tapped"
+               Canvas.ZIndex="22" 
+               HorizontalAlignment="Left" 
+               Margin="11,0,0,0"
+               Width="24"
+               Height="40">
+
+        </Image>
+        <TextBlock Text=" Terms Of Service"
+                   Grid.Row="1"
+                   FontSize="18" 
+                   FontFamily="Calibri" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center">
+        </TextBlock>
+
+        <WebView x:Name="webview1"
+                 Grid.Row="2"
+                 Source="https://www.tutorialspoint.com">
+        </WebView>
+    </Grid>
+</Page>

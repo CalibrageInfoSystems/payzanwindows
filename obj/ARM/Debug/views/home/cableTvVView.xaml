@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="PayZan.views.home.cableTvVView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PayZan.views.home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4">
+            <Image Height="80" Source="ms-appx:///Assets/1300x200.jpg"  Stretch="Fill" ></Image>
+        </StackPanel>
+
+        <Border Background="#FF8D2029" Grid.Row="1" Grid.ColumnSpan="2"></Border>
+        <Image x:ConnectionId='1'  Source="/Assets/back_arrow.png" Grid.Row="1" HorizontalAlignment="Left" Margin="20,7,0,9"                      ></Image>
+        <TextBlock x:Name="textblck" Grid.Row="1" Grid.ColumnSpan="2" FontWeight="Bold" Text="Cable TV" FontSize="16" VerticalAlignment="Center" Margin="55,0,0,0"></TextBlock>
+
+        <Image  Source="/Assets/television.png" Grid.Row="2" HorizontalAlignment="Center" Margin="88,39,49,15" ></Image>
+        <!--<Image  Source="/Assets/television.png" Grid.Row="2" HorizontalAlignment="Center"  Margin="90,10,50,9"  ></Image>-->
+        <TextBlock   Text="Cable Tv" Foreground="Black"  FontSize="24" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="38,0,0,25"></TextBlock>
+       
+        <!--<TextBox x:Name="textbox" PlaceholderText="Opeartor"  FontFamily="Calibri" Grid.Row="3" Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC"  Margin="19,32.167,19,0" ></TextBox>-->
+
+        <TextBlock HorizontalAlignment="Left"  Grid.Row="3" Text="Select Operator" Foreground="Gray" FontSize="18" Margin="23,1,0,-14"/>
+
+        <Button x:Name="frombtn"  Grid.Row="3"  BorderBrush="LightGray"  Background="#FFF5F0F0" BorderThickness="0.5"  Foreground="#FF403B3B" Margin="20,23,0,8.5" HorizontalAlignment="Left" Content="{Binding ElementName=serviceList,Path=SelectedItem}"  Width="355" HorizontalContentAlignment="Left" Grid.ColumnSpan="2" >
+
+            <Button.Flyout>
+                <ListPickerFlyout x:ConnectionId='4' x:Name="Cable_list"  ItemsSource="{Binding ListResult}"                                      >
+                    <ListPickerFlyout.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text= "{Binding Path = Name}"/>
+                        </DataTemplate>
+                    </ListPickerFlyout.ItemTemplate>
+                </ListPickerFlyout>
+            </Button.Flyout>
+        </Button>
+
+
+
+        <TextBlock HorizontalAlignment="Left" x:Name="lbl_operator" Grid.Row="3" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Foreground="Red" FontSize="14" Margin="19,38,10,-7"/>
+
+        <TextBox x:ConnectionId='2' x:Name="text_accountno" PlaceholderText="Account Number" InputScope="Number" Grid.Row="4" Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC" Margin="20,21,25,0" FontFamily="Calibri"                                 ></TextBox>
+        <TextBlock x:Name="lbl_accountNo" Grid.Row="4" HorizontalAlignment="Left" Foreground="Red" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Grid.RowSpan="2" FontSize="14"  Margin="19,36,10,62"></TextBlock>
+
+
+        <!--<Image  Source="/Assets/prepaid_contacts_icon.png"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Margin="5,25,17,13" ></Image>-->
+       
+        <TextBox x:Name="text_Amount"  PlaceholderText="Amount" Grid.Row="5" InputScope="Number" Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC" Margin="20,19,25,0" FontFamily="Calibri" ></TextBox>
+        <TextBlock x:Name="lbl_amount" Grid.Row="5" HorizontalAlignment="Left" Foreground="Red" Grid.ColumnSpan="2"  VerticalAlignment="Bottom" Grid.RowSpan="2" FontSize="14"  Margin="20,36,10,65"></TextBlock>
+
+        <!--<TextBox x:Name="textbox3"  PlaceholderText=" Amount" Grid.Row="5" Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC" Margin="19,11,19,0" FontFamily="Calibri" ></TextBox>-->
+        <Button x:ConnectionId='3' Grid.Row="6" Grid.ColumnSpan="2" BorderBrush="#FFE0DCDC"                              Content="Proceed to Recharge" Margin="35,12,0,1" Width="320" Height="65">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#5F1a58" Offset="0"/>
+                    <GradientStop Color="#8d2028" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+   
+    </Grid>
+</Page>
+
